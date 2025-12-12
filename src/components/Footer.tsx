@@ -116,13 +116,18 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-secondary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-secondary-foreground/50">
-            © {currentYear} Four Vip Transport. Todos os direitos reservados.
+        <div className="mt-16 pt-8 border-t border-secondary-foreground/10 flex flex-col items-center gap-4">
+          <p className="text-xs text-secondary-foreground/60 font-medium">
+            Four Vip Transport e Serviços - CNPJ: 40.820.333/0001-81
           </p>
-          <p className="text-xs text-secondary-foreground/50">
-            Transporte Executivo SP | Transfer Aeroporto GRU CGH VCP | Aluguel de Carro com Motorista
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full">
+            <p className="text-xs text-secondary-foreground/50">
+              © {currentYear} Four Vip Transport. Todos os direitos reservados.
+            </p>
+            <p className="text-xs text-secondary-foreground/50">
+              Transporte Executivo SP | Transfer Aeroporto GRU CGH VCP | Aluguel de Carro com Motorista
+            </p>
+          </div>
         </div>
       </div>
     </footer>

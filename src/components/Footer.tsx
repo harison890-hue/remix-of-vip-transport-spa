@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
@@ -29,10 +29,23 @@ export function Footer() {
                 Four Vip Transport
               </span>
             </div>
-            <p className="text-sm text-secondary-foreground/70 leading-relaxed">
+            <p className="text-sm text-secondary-foreground/70 leading-relaxed mb-6">
               Excelência em transporte executivo. Seu tempo é precioso, nossa
               missão é cuidar dele com sofisticação.
             </p>
+            
+            {/* Social Media */}
+            <div className="flex items-center gap-4">
+              <a
+                href="#instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
+              </a>
+            </div>
           </div>
 
           {/* Navigation Column */}

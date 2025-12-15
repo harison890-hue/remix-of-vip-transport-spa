@@ -45,6 +45,7 @@
     --anthracite-light: 0 0% 25%;
     --off-white: 40 33% 97%;
     --cream: 40 40% 94%;
+    --header-bar: 0 0% 17%; /* #2B2B2B */
 
     /* Typography */
     --font-display: 'Playfair Display', Georgia, serif;

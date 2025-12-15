@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
@@ -109,20 +110,20 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#termos"
+                <Link
+                  to="/termos-de-uso"
                   className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   Termos de Uso
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#privacidade"
+                <Link
+                  to="/politica-de-privacidade"
                   className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors duration-300"
                 >
                   Políticas de Privacidade
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
+  { href: "/", label: "Início", isRoute: true },
   { href: "#servicos", label: "Serviços", isRoute: false },
   { href: "#frota", label: "Frota", isRoute: false },
   { href: "#depoimentos", label: "Depoimentos", isRoute: false },

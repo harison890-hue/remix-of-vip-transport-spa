@@ -29,17 +29,7 @@ export function Header() {
   };
 
   return (
-    <>
-      {/* Barra superior decorativa */}
-      <div className="fixed top-0 left-0 right-0 z-50 h-2 bg-header-bar" />
-      
-      <header
-        className={`fixed top-2 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-background/95 backdrop-blur-md shadow-subtle py-3"
-            : "bg-transparent py-5"
-        }`}
-      >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-header-bar py-4">
       <div className="container-premium px-6 lg:px-12">
         <nav className="flex items-center justify-between">
           {/* Logo */}
@@ -48,7 +38,7 @@ export function Header() {
               <span className="text-2xl md:text-3xl font-display font-bold text-primary">
                 FV
               </span>
-              <span className="hidden md:block ml-2 text-lg font-display text-foreground">
+              <span className="hidden md:block ml-2 text-lg font-display text-white">
                 Four Vip Transport
               </span>
             </div>
@@ -60,7 +50,7 @@ export function Header() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide"
+                className="text-sm font-medium text-white/80 hover:text-primary transition-colors duration-300 tracking-wide"
               >
                 {link.label}
               </button>
@@ -90,7 +80,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-white hover:text-primary transition-colors"
             aria-label="Menu"
           >
             {isMobileMenuOpen ? (
@@ -145,6 +135,5 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
-    </>
   );
 }

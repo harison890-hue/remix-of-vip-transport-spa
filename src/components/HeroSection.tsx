@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const WhatsAppIcon = () => (
   <svg
@@ -26,7 +27,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center bg-background overflow-hidden"
+      className="relative min-h-screen flex items-center bg-background overflow-hidden pt-16 md:pt-8"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
@@ -175,9 +176,9 @@ export function HeroSection() {
 
               <p className="text-xs text-muted-foreground text-center">
                 Ao enviar, você concorda com nossa{" "}
-                <a href="#privacidade" className="text-primary hover:underline">
+                <Link to="/politica-de-privacidade" className="text-primary hover:underline">
                   Política de Privacidade
-                </a>
+                </Link>
               </p>
             </div>
           </motion.div>

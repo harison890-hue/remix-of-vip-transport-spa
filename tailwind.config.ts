@@ -57,6 +57,7 @@ export default {
           light: "hsl(var(--anthracite-light))",
         },
         cream: "hsl(var(--cream))",
+        "header-bar": "hsl(var(--header-bar))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

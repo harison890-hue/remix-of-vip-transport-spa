@@ -3,45 +3,47 @@ import { Wifi, Shield, MapPin, Armchair } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-import fleetSedan from "@/assets/fleet-sedan.jpg";
+import fleetMercedesC180 from "@/assets/fleet-mercedes-c180.jpg";
+import fleetCorolla from "@/assets/fleet-corolla.png";
+import fleetJeepCommander from "@/assets/fleet-jeep-commander.jpg";
+import fleetMinivan from "@/assets/fleet-minivan.jpg";
 import fleetVan from "@/assets/fleet-van.jpg";
-import fleetBmw from "@/assets/fleet-bmw.jpg";
 
 const vehicles = [
   {
     id: 1,
     name: "Sedan Premium",
     category: "Sedan Premium",
-    image: fleetBmw,
+    image: fleetMercedesC180,
     passengers: "3 passageiros",
-    description: "BMW Série 7, Mercedes-Benz Classe S, Audi A8 e similares. Disponíveis nas versões convencionais ou blindados.",
+    description: "Mercedes C180, Mercedes E250 e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Couro Premium", "Água Mineral", "Carregador USB"],
   },
   {
     id: 2,
     name: "Sedan Executivo",
     category: "Sedan Executivo",
-    image: fleetSedan,
+    image: fleetCorolla,
     passengers: "4 passageiros",
-    description: "Toyota Corolla, Honda Civic, Volkswagen Jetta e similares. Disponíveis nas versões convencionais ou blindados.",
+    description: "Toyota Corolla, Nissan Sentra ou similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Ar Condicionado", "Conforto Total", "Carregador USB"],
   },
   {
     id: 3,
     name: "SUV Executivo",
     category: "SUV Executivo",
-    image: fleetBmw,
+    image: fleetJeepCommander,
     passengers: "4 passageiros",
-    description: "Toyota SW4, Jeep Commander, Chevrolet Trailblazer e similares. Disponíveis nas versões convencionais ou blindados.",
+    description: "Jeep Commander, Toyota Corolla Cross e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Espaço Amplo", "Conforto Premium", "Segurança Total"],
   },
   {
     id: 4,
     name: "Minivan Executiva",
     category: "Minivan Executiva",
-    image: fleetVan,
+    image: fleetMinivan,
     passengers: "6 passageiros",
-    description: "Chevrolet Spin, Toyota Innova, Kia Carnival e similares. Disponíveis nas versões convencionais ou blindados.",
+    description: "Fiat Scudo, Peugeot Expert e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Conforto Familiar"],
   },
   {
@@ -50,7 +52,7 @@ const vehicles = [
     category: "Van Executiva",
     image: fleetVan,
     passengers: "12 passageiros",
-    description: "Mercedes-Benz Sprinter, Fiat Ducato, Renault Master e similares. Disponíveis nas versões convencionais ou blindados.",
+    description: "Mercedes Sprinter, Renault Master e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Seguro Total"],
   },
 ];

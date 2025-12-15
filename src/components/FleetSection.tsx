@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Wifi, Shield, MapPin, Armchair } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 import fleetSedan from "@/assets/fleet-sedan.jpg";
 import fleetVan from "@/assets/fleet-van.jpg";
@@ -9,27 +10,48 @@ import fleetBmw from "@/assets/fleet-bmw.jpg";
 const vehicles = [
   {
     id: 1,
-    name: "Mercedes-Benz Classe S",
-    category: "Sedan Executivo",
-    image: fleetSedan,
+    name: "Sedan Premium",
+    category: "Sedan Premium",
+    image: fleetBmw,
     passengers: "3 passageiros",
+    description: "BMW Série 7, Mercedes-Benz Classe S, Audi A8 e similares. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Couro Premium", "Água Mineral", "Carregador USB"],
   },
   {
     id: 2,
-    name: "Mercedes-Benz Sprinter",
-    category: "Van Executiva",
-    image: fleetVan,
-    passengers: "12 passageiros",
-    features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Seguro Total"],
+    name: "Sedan Executivo",
+    category: "Sedan Executivo",
+    image: fleetSedan,
+    passengers: "4 passageiros",
+    description: "Toyota Corolla, Honda Civic, Volkswagen Jetta e similares. Disponíveis nas versões convencionais ou blindados.",
+    features: ["Wi-Fi 4G", "Ar Condicionado", "Conforto Total", "Carregador USB"],
   },
   {
     id: 3,
-    name: "BMW Série 7 / Audi A8",
-    category: "Sedan Luxo",
+    name: "SUV Executivo",
+    category: "SUV Executivo",
     image: fleetBmw,
-    passengers: "3 passageiros",
-    features: ["Wi-Fi 4G", "Interior Blindado", "Champanhe", "TV LED"],
+    passengers: "4 passageiros",
+    description: "Toyota SW4, Jeep Commander, Chevrolet Trailblazer e similares. Disponíveis nas versões convencionais ou blindados.",
+    features: ["Wi-Fi 4G", "Espaço Amplo", "Conforto Premium", "Segurança Total"],
+  },
+  {
+    id: 4,
+    name: "Minivan Executiva",
+    category: "Minivan Executiva",
+    image: fleetVan,
+    passengers: "6 passageiros",
+    description: "Chevrolet Spin, Toyota Innova, Kia Carnival e similares. Disponíveis nas versões convencionais ou blindados.",
+    features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Conforto Familiar"],
+  },
+  {
+    id: 5,
+    name: "Van Executiva",
+    category: "Van Executiva",
+    image: fleetVan,
+    passengers: "12 passageiros",
+    description: "Mercedes-Benz Sprinter, Fiat Ducato, Renault Master e similares. Disponíveis nas versões convencionais ou blindados.",
+    features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Seguro Total"],
   },
 ];
 
@@ -92,9 +114,9 @@ export function FleetSection() {
           ))}
         </motion.div>
 
-        {/* Vehicle Carousel */}
+        {/* Vehicle Grid */}
         <div className="relative">
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {vehicles.map((vehicle, index) => (
               <motion.div
                 key={vehicle.id}
@@ -111,14 +133,14 @@ export function FleetSection() {
                   <img
                     src={vehicle.image}
                     alt={`${vehicle.name} - Transporte Executivo SP`}
-                    className="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-80" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
                     <span className="text-xs font-medium text-primary tracking-wider uppercase">
                       {vehicle.category}
                     </span>
-                    <h3 className="text-xl font-display font-medium text-secondary-foreground mt-1">
+                    <h3 className="text-lg font-display font-medium text-secondary-foreground mt-1">
                       {vehicle.name}
                     </h3>
                     <p className="text-sm text-secondary-foreground/70 mt-1">
@@ -127,8 +149,13 @@ export function FleetSection() {
                   </div>
                 </div>
 
+                {/* Description */}
+                <p className="mt-4 text-sm text-secondary-foreground/70 leading-relaxed">
+                  {vehicle.description}
+                </p>
+
                 {/* Features */}
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2">
                   {vehicle.features.map((feature) => (
                     <span
                       key={feature}
@@ -138,6 +165,20 @@ export function FleetSection() {
                     </span>
                   ))}
                 </div>
+
+                {/* CTA Button */}
+                <Button
+                  variant="bronze"
+                  className="w-full mt-4"
+                  onClick={() =>
+                    window.open(
+                      `https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um ${vehicle.name} para transporte executivo.`,
+                      "_blank"
+                    )
+                  }
+                >
+                  Solicitar Esse
+                </Button>
               </motion.div>
             ))}
           </div>

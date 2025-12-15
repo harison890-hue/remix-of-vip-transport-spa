@@ -75,7 +75,7 @@ export function Header() {
             <Button
               variant="header"
               size="sm"
-              onClick={() => window.open("tel:+5511999999999")}
+              onClick={() => window.open("tel:+5511945339917")}
               className="gap-2"
             >
               <Phone className="h-4 w-4" />
@@ -129,7 +129,7 @@ export function Header() {
                   variant="header"
                   size="lg"
                   className="w-full gap-2"
-                  onClick={() => window.open("tel:+5511999999999")}
+                  onClick={() => window.open("tel:+5511945339917")}
                 >
                   <Phone className="h-5 w-5" />
                   <span>Ligar Agora</span>

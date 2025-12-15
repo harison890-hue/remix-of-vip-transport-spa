@@ -78,10 +78,10 @@ export function Footer() {
                 <Phone className="h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <a
-                    href="tel:+5511999999999"
+                    href="tel:+5511945339917"
                     className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
                   >
-                    (11) 99999-9999
+                    (11) 94533-9917
                   </a>
                 </div>
               </li>

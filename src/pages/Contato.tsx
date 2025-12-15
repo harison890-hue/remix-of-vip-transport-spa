@@ -145,7 +145,7 @@ export default function Contato() {
                   Para um atendimento mais ágil, entre em contato diretamente pelo WhatsApp.
                 </p>
                 <Button
-                  variant="bronze"
+                  variant="whatsapp"
                   size="lg"
                   onClick={() =>
                     window.open(

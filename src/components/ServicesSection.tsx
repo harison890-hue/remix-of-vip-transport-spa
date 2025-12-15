@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Plane, Clock, Calendar, MapPin, Star, Shield } from "lucide-react";
+import { Plane, Clock, Calendar, MapPin, Star, Shield, BellRing } from "lucide-react";
 
 const services = [
   {
@@ -29,6 +29,13 @@ const services = [
     description:
       "Rotas exclusivas para viagens intermunicipais e interestaduais com total conforto.",
     keywords: ["Viagens SP", "Interestadual"],
+  },
+  {
+    icon: BellRing,
+    title: "Concierge",
+    description:
+      "Serviço personalizado de concierge para atender suas necessidades especiais com exclusividade e discrição.",
+    keywords: ["Concierge", "Exclusivo"],
   },
 ];
 

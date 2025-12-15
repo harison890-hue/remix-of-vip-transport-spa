@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -104,84 +103,6 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Column - Quote Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            id="cotacao"
-            className="bg-card/95 backdrop-blur-sm border border-border rounded-lg p-6 md:p-8 shadow-elegant"
-          >
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-xl font-display font-medium text-foreground">
-                  Solicite sua Cotação
-                </h2>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Responderemos em até 15 minutos
-                </p>
-              </div>
-
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Nome Completo
-                  </label>
-                  <Input
-                    type="text"
-                    placeholder="Seu nome"
-                    className="bg-background border-border focus:border-primary"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    WhatsApp
-                  </label>
-                  <Input
-                    type="tel"
-                    placeholder="(11) 99999-9999"
-                    className="bg-background border-border focus:border-primary"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Tipo de Serviço
-                  </label>
-                  <select className="w-full h-10 px-3 rounded-sm border border-border bg-background text-foreground text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
-                    <option value="">Selecione o serviço</option>
-                    <option value="aeroporto">Transfer Aeroporto</option>
-                    <option value="disposicao">Disposição por Hora</option>
-                    <option value="eventos">Eventos Corporativos</option>
-                    <option value="viagem">Viagem Personalizada</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Observações (opcional)
-                  </label>
-                  <textarea
-                    placeholder="Conte-nos mais sobre sua necessidade..."
-                    rows={3}
-                    className="w-full px-3 py-2 rounded-sm border border-border bg-background text-foreground text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                  />
-                </div>
-
-                <Button variant="bronze" size="lg" className="w-full">
-                  Enviar Solicitação
-                </Button>
-              </form>
-
-              <p className="text-xs text-muted-foreground text-center">
-                Ao enviar, você concorda com nossa{" "}
-                <Link to="/politica-de-privacidade" className="text-primary hover:underline">
-                  Política de Privacidade
-                </Link>
-              </p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

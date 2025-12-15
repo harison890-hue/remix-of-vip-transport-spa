@@ -38,7 +38,7 @@ export function Footer() {
             {/* Social Media */}
             <div className="flex items-center gap-4">
               <a
-                href="#instagram"
+                href="https://www.instagram.com/fourviip/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"

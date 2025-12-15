@@ -5,10 +5,10 @@ import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { href: "#servicos", label: "Serviços" },
-  { href: "#frota", label: "Frota" },
-  { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#servicos", label: "Serviços", isRoute: false },
+  { href: "#frota", label: "Frota", isRoute: false },
+  { href: "#depoimentos", label: "Depoimentos", isRoute: false },
+  { href: "/contato", label: "Contato", isRoute: true },
 ];
 
 export function Header() {
@@ -59,15 +59,25 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="text-sm font-medium text-white/80 hover:text-primary transition-colors duration-300 tracking-wide"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-sm font-medium text-white/80 hover:text-primary transition-colors duration-300 tracking-wide"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link.href)}
+                  className="text-sm font-medium text-white/80 hover:text-primary transition-colors duration-300 tracking-wide"
+                >
+                  {link.label}
+                </button>
+              )
+            )}
           </div>
 
           {/* CTA Buttons */}
@@ -115,15 +125,26 @@ export function Header() {
             className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border"
           >
             <div className="container-premium px-6 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleNavClick(link.href)}
-                  className="block w-full text-left py-3 text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border/50"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.isRoute ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left py-3 text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border/50"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.href}
+                    onClick={() => handleNavClick(link.href)}
+                    className="block w-full text-left py-3 text-lg font-medium text-foreground hover:text-primary transition-colors border-b border-border/50"
+                  >
+                    {link.label}
+                  </button>
+                )
+              )}
               <div className="pt-4 space-y-3">
                 <Button
                   variant="header"

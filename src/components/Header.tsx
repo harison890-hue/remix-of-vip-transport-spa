@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import logoFourvip from "@/assets/logo-fourvip.png";
 const navLinks = [
   { href: "/", label: "Início", isRoute: true },
   { href: "#servicos", label: "Serviços", isRoute: false },
@@ -47,15 +47,12 @@ export function Header() {
       <div className="container-premium px-6 lg:px-12">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="flex items-center">
-              <span className="text-2xl md:text-3xl font-display font-bold text-primary">
-                FV
-              </span>
-              <span className="hidden md:block ml-2 text-lg font-display text-white">
-                Four Vip Transport
-              </span>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={logoFourvip} 
+              alt="Four Vip Transport" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

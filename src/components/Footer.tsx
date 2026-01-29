@@ -28,7 +28,7 @@ export function Footer() {
                 <img 
                   src={logoFourvip} 
                   alt="Four Vip Transport" 
-                  className="h-12 w-auto object-contain"
+                  className="h-12 w-auto object-contain brightness-0 invert"
                 />
               </Link>
             </div>

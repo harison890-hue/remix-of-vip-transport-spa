@@ -62,7 +62,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-sm font-medium text-white/80 hover:text-primary transition-colors duration-300 tracking-wide"
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide"
                 >
                   {link.label}
                 </Link>
@@ -70,7 +70,7 @@ export function Header() {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-sm font-medium text-white/80 hover:text-primary transition-colors duration-300 tracking-wide"
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide"
                 >
                   {link.label}
                 </button>
@@ -101,7 +101,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
             aria-label="Menu"
           >
             {isMobileMenuOpen ? (

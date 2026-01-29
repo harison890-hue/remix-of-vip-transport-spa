@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoFourvip from "@/assets/logo-fourvip.png";
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
@@ -22,13 +23,14 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-3xl font-display font-bold text-primary">
-                FV
-              </span>
-              <span className="text-lg font-display text-secondary-foreground">
-                Four Vip Transport
-              </span>
+            <div className="mb-6">
+              <Link to="/">
+                <img 
+                  src={logoFourvip} 
+                  alt="Four Vip Transport" 
+                  className="h-12 w-auto object-contain brightness-0 invert"
+                />
+              </Link>
             </div>
             <p className="text-sm text-secondary-foreground/70 leading-relaxed mb-6">
               Excelência em transporte executivo. Seu tempo é precioso, nossa

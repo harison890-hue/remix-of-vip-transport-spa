@@ -191,7 +191,7 @@ export function FleetSection() {
                   className="w-full mt-4"
                   onClick={() =>
                     window.open(
-                      `https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um ${vehicle.name} para transporte executivo.`,
+                      `https://wa.me/5511996702111?text=Olá! Gostaria de solicitar um ${vehicle.name} para transporte executivo.`,
                       "_blank"
                     )
                   }

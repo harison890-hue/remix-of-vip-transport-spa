@@ -33,7 +33,7 @@ export function ExitIntentPopup() {
 
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/5511945339917?text=Olá! Gostaria de falar com um especialista sobre transporte executivo.",
+      "https://wa.me/5511996702111?text=Olá! Vim pelo site e gostaria de garantir meu *bônus exclusivo*! Poderia me ajudar?",
       "_blank"
     );
     setIsVisible(false);

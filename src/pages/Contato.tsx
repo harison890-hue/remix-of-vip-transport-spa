@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    value: "(11) 94533-9917",
-    link: "tel:+5511945339917",
+    value: "(11) 99670-2111",
+    link: "tel:+5511996702111",
   },
   {
     icon: Mail,
@@ -60,7 +60,7 @@ export default function Contato() {
     const message = `Olá! Meu nome é ${formData.nome}.%0A%0A*Assunto:* ${formData.assunto}%0A%0A*Mensagem:* ${formData.mensagem}%0A%0A*E-mail:* ${formData.email}%0A*Telefone:* ${formData.telefone}`;
     
     window.open(
-      `https://wa.me/5511945339917?text=${message}`,
+      `https://wa.me/5511996702111?text=${message}`,
       "_blank"
     );
 
@@ -149,7 +149,7 @@ export default function Contato() {
                   size="lg"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5511945339917?text=Olá! Gostaria de mais informações sobre os serviços de transporte executivo.",
+                      "https://wa.me/5511996702111?text=Olá! Gostaria de mais informações sobre os serviços de transporte executivo.",
                       "_blank"
                     )
                   }

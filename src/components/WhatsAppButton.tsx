@@ -14,7 +14,7 @@ const WhatsAppIcon = () => (
 export function WhatsAppButton() {
   const handleClick = () => {
     window.open(
-      "https://wa.me/5511945339917?text=Olá! Gostaria de solicitar uma cotação para transporte executivo.",
+      "https://wa.me/5511996702111?text=Olá! Gostaria de solicitar uma cotação para transporte executivo.",
       "_blank"
     );
   };

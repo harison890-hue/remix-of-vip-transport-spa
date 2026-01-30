@@ -129,7 +129,7 @@ export function ServicesSection() {
                 className="w-full mt-auto"
                 onClick={() =>
                   window.open(
-                    `https://wa.me/5511945339917?text=Olá! Gostaria de solicitar o serviço: ${service.title}`,
+                    `https://wa.me/5511996702111?text=Olá! Gostaria de solicitar o serviço: ${service.title}`,
                     "_blank"
                   )
                 }

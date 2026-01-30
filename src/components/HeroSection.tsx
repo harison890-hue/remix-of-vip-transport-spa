@@ -18,7 +18,7 @@ import heroCar from "@/assets/hero-car.jpg";
 export function HeroSection() {
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/5511999999999?text=Olá! Gostaria de solicitar uma cotação para transporte executivo.",
+      "https://wa.me/5511996702111?text=Olá! Gostaria de solicitar uma cotação para transporte executivo.",
       "_blank"
     );
   };

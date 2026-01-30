@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Headset } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoFourvip from "@/assets/logo-fourvip.png";
 const navLinks = [
@@ -93,8 +93,10 @@ export function Header() {
               variant="bronze"
               size="sm"
               onClick={() => handleNavClick("#cotacao")}
+              className="gap-2"
             >
-              Solicitar Cotação
+              <Headset className="h-4 w-4" />
+              Falar com Atendente
             </Button>
           </div>
 
@@ -156,10 +158,11 @@ export function Header() {
                 <Button
                   variant="bronze"
                   size="lg"
-                  className="w-full"
+                  className="w-full gap-2"
                   onClick={() => handleNavClick("#cotacao")}
                 >
-                  Solicitar Cotação
+                  <Headset className="h-5 w-5" />
+                  Falar com Atendente
                 </Button>
               </div>
             </div>

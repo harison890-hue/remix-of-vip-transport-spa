@@ -48,37 +48,37 @@ export function ExitIntentPopup() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
             onClick={handleClose}
           />
 
           {/* Popup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ type: "spring", duration: 0.5 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-md mx-auto"
+            exit={{ opacity: 0, scale: 0.85 }}
+            transition={{ type: "spring", duration: 0.4 }}
+            className="relative z-10 w-[85%] max-w-sm"
           >
-            <div className="bg-secondary rounded-lg shadow-2xl border border-secondary-foreground/10 p-6 md:p-8 relative">
+            <div className="bg-secondary rounded-lg shadow-2xl border border-secondary-foreground/10 p-5 relative">
               {/* Close Button */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 text-secondary-foreground/60 hover:text-secondary-foreground transition-colors"
+                className="absolute top-3 right-3 text-secondary-foreground/60 hover:text-secondary-foreground transition-colors"
                 aria-label="Fechar"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
               </button>
 
               {/* Content */}
-              <div className="space-y-5">
-                <h3 className="text-2xl font-display font-semibold text-secondary-foreground">
+              <div className="space-y-4">
+                <h3 className="text-xl font-display font-semibold text-secondary-foreground pr-6">
                   Antes de Sair...
                 </h3>
 
@@ -94,11 +94,11 @@ export function ExitIntentPopup() {
                 </p>
 
                 {/* Benefits */}
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Check className="h-3 w-3 text-primary" />
+                    <li key={benefit} className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-2.5 w-2.5 text-primary" />
                       </div>
                       <span className="text-sm text-secondary-foreground/90">
                         {benefit}
@@ -110,8 +110,8 @@ export function ExitIntentPopup() {
                 {/* CTA Button */}
                 <Button
                   variant="bronze"
-                  size="lg"
-                  className="w-full mt-4"
+                  size="default"
+                  className="w-full mt-2"
                   onClick={handleWhatsApp}
                 >
                   Falar com Especialista Agora!
@@ -119,7 +119,7 @@ export function ExitIntentPopup() {
               </div>
             </div>
           </motion.div>
-        </>
+        </div>
       )}
     </AnimatePresence>
   );

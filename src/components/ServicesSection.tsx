@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Plane, Clock, Calendar, MapPin, Star, Shield, BellRing } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -101,7 +102,7 @@ export function ServicesSection() {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className="group p-6 bg-card border border-border rounded-lg hover:border-primary/30 hover:shadow-elegant transition-all duration-500"
+              className="group p-6 bg-card border border-border rounded-lg hover:border-primary/30 hover:shadow-elegant transition-all duration-500 flex flex-col"
             >
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
                 <service.icon className="h-7 w-7 text-primary" />
@@ -109,10 +110,10 @@ export function ServicesSection() {
               <h3 className="text-lg font-display font-medium text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow">
                 {service.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {service.keywords.map((keyword) => (
                   <span
                     key={keyword}
@@ -122,6 +123,19 @@ export function ServicesSection() {
                   </span>
                 ))}
               </div>
+              <Button
+                variant="bronze"
+                size="sm"
+                className="w-full mt-auto"
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/5511945339917?text=Olá! Gostaria de solicitar o serviço: ${service.title}`,
+                    "_blank"
+                  )
+                }
+              >
+                SOLICITAR
+              </Button>
             </motion.div>
           ))}
         </motion.div>

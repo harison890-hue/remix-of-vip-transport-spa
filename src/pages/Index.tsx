@@ -6,7 +6,6 @@ import { DifferentialsSection } from "@/components/DifferentialsSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { CookieConsent } from "@/components/CookieConsent";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 
 const Index = () => {
@@ -22,7 +21,6 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-      <CookieConsent />
       <ExitIntentPopup />
     </div>
   );

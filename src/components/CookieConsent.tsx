@@ -7,11 +7,9 @@ export function CookieConsent() {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
-    console.log("CookieConsent: checking localStorage, consent =", consent);
     if (!consent) {
       // Show banner after a short delay
       const timer = setTimeout(() => {
-        console.log("CookieConsent: showing banner");
         setIsVisible(true);
       }, 1000);
       return () => clearTimeout(timer);
@@ -42,11 +40,11 @@ export function CookieConsent() {
           <div className="h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
           
           {/* Main banner */}
-          <div className="bg-[#1a1f24] py-4 px-4 md:px-8">
-            <div className="max-w-7xl mx-auto">
+          <div className="bg-secondary text-secondary-foreground py-4 px-4 md:px-8">
+            <div className="container-premium">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 {/* Text with link */}
-                <p className="text-sm text-gray-300 text-center md:text-left">
+                <p className="text-sm text-secondary-foreground/80 text-center md:text-left">
                   Utilizamos cookies para otimizar sua experiência e análises.{" "}
                   <Link 
                     to="/politica-de-privacidade" 

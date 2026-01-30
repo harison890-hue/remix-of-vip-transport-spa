@@ -35,7 +35,7 @@ export function HeroSection() {
           alt="Veículo executivo de luxo Four Vip Transport"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(40,20%,92%)] via-[hsl(40,20%,92%)]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/70 to-transparent" />
       </div>
 
       {/* Content */}
@@ -61,17 +61,17 @@ export function HeroSection() {
                 </span>
               </motion.div>
 
-              <h1 className="heading-display text-foreground text-balance">
+              <h1 className="heading-display text-white text-balance">
                 Seu Tempo.{" "}
                 <span className="text-primary">Nossa Excelência.</span>
               </h1>
 
-              <p className="text-xl md:text-2xl font-display text-foreground/80">
+              <p className="text-xl md:text-2xl font-display text-white/80">
                 Transporte Executivo com Padrão VIP
               </p>
             </div>
 
-            <p className="text-premium text-muted-foreground max-w-lg">
+            <p className="text-premium text-white/70 max-w-lg">
               Experimente o mais alto padrão em mobilidade executiva. Pontualidade,
               discrição e conforto absoluto para executivos que valorizam cada
               segundo do seu tempo.

@@ -128,7 +128,7 @@ export function Header() {
             <Button
               variant="bronze"
               size="sm"
-              onClick={() => handleNavClick("#cotacao")}
+              onClick={() => window.open("https://wa.me/5511996702111?text=Olá! Gostaria de falar com um atendente sobre transporte executivo.", "_blank")}
               className="gap-2"
             >
               <Headset className="h-4 w-4" />
@@ -195,7 +195,7 @@ export function Header() {
                   variant="bronze"
                   size="lg"
                   className="w-full gap-2"
-                  onClick={() => handleNavClick("#cotacao")}
+                  onClick={() => window.open("https://wa.me/5511996702111?text=Olá! Gostaria de falar com um atendente sobre transporte executivo.", "_blank")}
                 >
                   <Headset className="h-5 w-5" />
                   Falar com Atendente

@@ -6,30 +6,31 @@ import { motion, AnimatePresence } from "framer-motion";
 import logoFourvip from "@/assets/logo-fourvip.png";
 
 const FlagBrazil = () => (
-  <svg viewBox="0 0 512 512" className="w-6 h-4 rounded-sm shadow-sm cursor-pointer hover:scale-110 transition-transform">
-    <rect fill="#009B3A" width="512" height="512"/>
-    <polygon fill="#FEDF00" points="256,64 480,256 256,448 32,256"/>
-    <circle fill="#002776" cx="256" cy="256" r="96"/>
+  <svg viewBox="0 0 640 480" className="w-5 h-3.5 rounded-[2px] shadow-sm cursor-pointer hover:opacity-80 transition-opacity">
+    <rect fill="#229E45" width="640" height="480"/>
+    <polygon fill="#F8E509" points="320,40 600,240 320,440 40,240"/>
+    <circle fill="#2B49A3" cx="320" cy="240" r="80"/>
+    <path d="M260,240 Q320,200 380,240" stroke="#FFFFFF" strokeWidth="12" fill="none"/>
   </svg>
 );
 
 const FlagUSA = () => (
-  <svg viewBox="0 0 512 336" className="w-6 h-4 rounded-sm shadow-sm cursor-pointer hover:scale-110 transition-transform">
-    <rect fill="#BF0A30" width="512" height="336"/>
-    <rect fill="#FFFFFF" y="26" width="512" height="26"/>
-    <rect fill="#FFFFFF" y="78" width="512" height="26"/>
-    <rect fill="#FFFFFF" y="130" width="512" height="26"/>
-    <rect fill="#FFFFFF" y="182" width="512" height="26"/>
-    <rect fill="#FFFFFF" y="234" width="512" height="26"/>
-    <rect fill="#FFFFFF" y="286" width="512" height="26"/>
-    <rect fill="#002868" width="205" height="182"/>
+  <svg viewBox="0 0 640 480" className="w-5 h-3.5 rounded-[2px] shadow-sm cursor-pointer hover:opacity-80 transition-opacity">
+    <rect fill="#BD3D44" width="640" height="480"/>
+    <rect fill="#FFFFFF" y="37" width="640" height="37"/>
+    <rect fill="#FFFFFF" y="111" width="640" height="37"/>
+    <rect fill="#FFFFFF" y="185" width="640" height="37"/>
+    <rect fill="#FFFFFF" y="259" width="640" height="37"/>
+    <rect fill="#FFFFFF" y="333" width="640" height="37"/>
+    <rect fill="#FFFFFF" y="407" width="640" height="37"/>
+    <rect fill="#192F5D" width="256" height="259"/>
   </svg>
 );
 
 const FlagSpain = () => (
-  <svg viewBox="0 0 512 336" className="w-6 h-4 rounded-sm shadow-sm cursor-pointer hover:scale-110 transition-transform">
-    <rect fill="#AA151B" width="512" height="336"/>
-    <rect fill="#F1BF00" y="84" width="512" height="168"/>
+  <svg viewBox="0 0 640 480" className="w-5 h-3.5 rounded-[2px] shadow-sm cursor-pointer hover:opacity-80 transition-opacity">
+    <rect fill="#C60B1E" width="640" height="480"/>
+    <rect fill="#FFC400" y="120" width="640" height="240"/>
   </svg>
 );
 const navLinks = [
@@ -109,7 +110,7 @@ export function Header() {
           {/* Flags + CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             {/* Language Flags */}
-            <div className="flex items-center gap-2 mr-2">
+            <div className="flex items-center gap-1 mr-3">
               <FlagBrazil />
               <FlagUSA />
               <FlagSpain />

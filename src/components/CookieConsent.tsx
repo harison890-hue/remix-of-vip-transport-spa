@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Cookie, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
@@ -21,7 +19,7 @@ export function CookieConsent() {
     setIsVisible(false);
   };
 
-  const handleRejectAll = () => {
+  const handleConfigurePreferences = () => {
     localStorage.setItem("cookieConsent", "essential");
     setIsVisible(false);
   };
@@ -34,74 +32,41 @@ export function CookieConsent() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6"
+          className="fixed bottom-0 left-0 right-0 z-50"
         >
-          <div className="container-premium">
-            <div className="bg-card border border-border rounded-lg shadow-elegant p-6 md:p-8">
-              <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                {/* Icon & Content */}
-                <div className="flex items-start gap-4 flex-1">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Cookie className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-display font-medium text-foreground mb-2">
-                      Utilizamos Cookies
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Utilizamos cookies para melhorar sua experiência de navegação,
-                      personalizar conteúdo e analisar nosso tráfego. Ao clicar em
-                      "Aceitar Todos", você consente com o uso de todos os cookies.
-                    </p>
-                    {showDetails && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        className="mt-4 pt-4 border-t border-border"
-                      >
-                        <p className="text-xs text-muted-foreground">
-                          <strong>Cookies Essenciais:</strong> Necessários para o
-                          funcionamento do site.
-                          <br />
-                          <strong>Cookies de Análise:</strong> Ajudam-nos a
-                          entender como os visitantes interagem com o site.
-                          <br />
-                          <strong>Cookies de Marketing:</strong> Utilizados para
-                          personalizar anúncios.
-                        </p>
-                      </motion.div>
-                    )}
-                    <button
-                      onClick={() => setShowDetails(!showDetails)}
-                      className="text-sm text-primary hover:underline mt-2"
-                    >
-                      {showDetails ? "Ocultar detalhes" : "Ver mais detalhes"}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="flex flex-col sm:flex-row gap-3 lg:flex-shrink-0">
-                  <Button
-                    variant="bronzeOutline"
-                    size="default"
-                    onClick={handleRejectAll}
+          {/* Gradient border top */}
+          <div className="h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
+          
+          {/* Main banner */}
+          <div className="bg-[#1a1f24] py-4 px-4 md:px-8">
+            <div className="container-premium">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                {/* Text with link */}
+                <p className="text-sm text-gray-300 text-center md:text-left">
+                  Utilizamos cookies para otimizar sua experiência e análises.{" "}
+                  <Link 
+                    to="/politica-de-privacidade" 
+                    className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
                   >
-                    Rejeitar
-                  </Button>
-                  <Button variant="bronze" size="default" onClick={handleAcceptAll}>
-                    Aceitar Todos
-                  </Button>
-                </div>
+                    Política de Cookies
+                  </Link>
+                </p>
 
-                {/* Close Button */}
-                <button
-                  onClick={handleRejectAll}
-                  className="absolute top-4 right-4 lg:static text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Fechar"
-                >
-                  <X className="h-5 w-5" />
-                </button>
+                {/* Buttons */}
+                <div className="flex items-center gap-3 flex-shrink-0">
+                  <button
+                    onClick={handleAcceptAll}
+                    className="px-5 py-2 bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-medium rounded transition-colors"
+                  >
+                    Aceitar Todos
+                  </button>
+                  <button
+                    onClick={handleConfigurePreferences}
+                    className="px-5 py-2 border border-primary/60 text-primary hover:bg-primary/10 text-sm font-medium rounded transition-colors"
+                  >
+                    Configurar Preferências
+                  </button>
+                </div>
               </div>
             </div>
           </div>

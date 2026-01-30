@@ -7,9 +7,13 @@ export function CookieConsent() {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
+    console.log("CookieConsent: checking localStorage, consent =", consent);
     if (!consent) {
       // Show banner after a short delay
-      const timer = setTimeout(() => setIsVisible(true), 1500);
+      const timer = setTimeout(() => {
+        console.log("CookieConsent: showing banner");
+        setIsVisible(true);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -32,14 +36,14 @@ export function CookieConsent() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="fixed bottom-0 left-0 right-0 z-50"
+          className="fixed bottom-0 left-0 right-0 z-[9999]"
         >
           {/* Gradient border top */}
           <div className="h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
           
           {/* Main banner */}
           <div className="bg-[#1a1f24] py-4 px-4 md:px-8">
-            <div className="container-premium">
+            <div className="max-w-7xl mx-auto">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 {/* Text with link */}
                 <p className="text-sm text-gray-300 text-center md:text-left">

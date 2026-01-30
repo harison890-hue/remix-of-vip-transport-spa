@@ -60,11 +60,11 @@ export function ExitIntentPopup() {
 
           {/* Popup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-md"
+            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-md mx-auto"
           >
             <div className="bg-secondary rounded-lg shadow-2xl border border-secondary-foreground/10 p-6 md:p-8 relative">
               {/* Close Button */}
@@ -111,10 +111,10 @@ export function ExitIntentPopup() {
                 <Button
                   variant="bronze"
                   size="lg"
-                  className="w-full mt-2"
+                  className="w-full mt-4"
                   onClick={handleWhatsApp}
                 >
-                  Fale com um especialista agora!
+                  Falar com Especialista Agora!
                 </Button>
               </div>
             </div>

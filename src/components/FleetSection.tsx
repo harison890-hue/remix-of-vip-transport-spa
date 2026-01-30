@@ -29,21 +29,21 @@ import fleetVan from "@/assets/fleet-van.jpg";
 const vehicles = [
   {
     id: 1,
-    name: "Sedan Premium",
-    category: "Sedan Premium",
-    image: fleetMercedesC180,
-    passengers: "3 passageiros",
-    description: "Mercedes C180, Mercedes E250 e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
-    features: ["Wi-Fi 4G", "Couro Premium", "Água Mineral", "Carregador USB"],
-  },
-  {
-    id: 2,
     name: "Sedan Executivo",
     category: "Sedan Executivo",
     image: fleetCorolla,
     passengers: "4 passageiros",
     description: "Toyota Corolla, Nissan Sentra ou similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
     features: ["Wi-Fi 4G", "Ar Condicionado", "Conforto Total", "Carregador USB"],
+  },
+  {
+    id: 2,
+    name: "Sedan Premium",
+    category: "Sedan Premium",
+    image: fleetMercedesC180,
+    passengers: "3 passageiros",
+    description: "Mercedes C180, Mercedes E250 e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
+    features: ["Wi-Fi 4G", "Couro Premium", "Água Mineral", "Carregador USB"],
   },
   {
     id: 3,

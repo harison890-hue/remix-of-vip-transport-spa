@@ -1,5 +1,22 @@
 import { motion } from "framer-motion";
-import { Wifi, Shield, MapPin, Coffee } from "lucide-react";
+import { Wifi, Shield, MapPin } from "lucide-react";
+
+const ServingTrayIcon = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M3 18h18" />
+    <path d="M4 18c0-3.5 2-6 8-6s8 2.5 8 6" />
+    <circle cx="12" cy="8" r="2" />
+    <path d="M12 6V4" />
+  </svg>
+);
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -59,7 +76,7 @@ const vehicles = [
 
 const fleetFeatures = [
   { icon: Wifi, label: "Wi-Fi 4G" },
-  { icon: Coffee, label: "Serviço de Bordo" },
+  { icon: ServingTrayIcon, label: "Serviço de Bordo" },
   { icon: Shield, label: "Segurança Total" },
   { icon: MapPin, label: "GPS Monitorado" },
 ];

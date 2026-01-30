@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wifi, Shield, MapPin, Armchair } from "lucide-react";
+import { Wifi, Shield, MapPin, Coffee } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -59,7 +59,7 @@ const vehicles = [
 
 const fleetFeatures = [
   { icon: Wifi, label: "Wi-Fi 4G" },
-  { icon: Armchair, label: "Couro Premium" },
+  { icon: Coffee, label: "Serviço de Bordo" },
   { icon: Shield, label: "Segurança Total" },
   { icon: MapPin, label: "GPS Monitorado" },
 ];

@@ -1,20 +1,27 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
+    const pathname = location.pathname;
+
+    // Sempre exibe nas páginas legais (para qualquer visitante), conforme solicitado.
+    const alwaysShowOnLegalPages =
+      pathname === "/termos-de-uso" || pathname === "/politica-de-privacidade";
+
+    if (alwaysShowOnLegalPages || !consent) {
       // Show banner after a short delay
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [location.pathname]);
 
   const handleAcceptAll = () => {
     localStorage.setItem("cookieConsent", "all");

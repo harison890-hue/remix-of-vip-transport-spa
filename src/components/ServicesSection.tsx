@@ -134,7 +134,7 @@ export function ServicesSection() {
                   )
                 }
               >
-                SOLICITAR
+                Solicitar
               </Button>
             </motion.div>
           ))}

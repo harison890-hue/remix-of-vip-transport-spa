@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoFourvip from "@/assets/logo-fourvip.png";
+import logoFourvipFooter from "@/assets/logo-fourvip-footer.png";
 
 const navLinks = [
   { href: "#servicos", label: "Serviços" },
@@ -26,9 +26,9 @@ export function Footer() {
             <div className="mb-6">
               <Link to="/">
                 <img 
-                  src={logoFourvip} 
+                  src={logoFourvipFooter} 
                   alt="Four Vip Transport" 
-                  className="h-12 w-auto object-contain brightness-0 invert"
+                  className="h-14 w-auto object-contain"
                 />
               </Link>
             </div>

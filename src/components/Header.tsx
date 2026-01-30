@@ -4,6 +4,34 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, Headset } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoFourvip from "@/assets/logo-fourvip.png";
+
+const FlagBrazil = () => (
+  <svg viewBox="0 0 512 512" className="w-6 h-4 rounded-sm shadow-sm cursor-pointer hover:scale-110 transition-transform">
+    <rect fill="#009B3A" width="512" height="512"/>
+    <polygon fill="#FEDF00" points="256,64 480,256 256,448 32,256"/>
+    <circle fill="#002776" cx="256" cy="256" r="96"/>
+  </svg>
+);
+
+const FlagUSA = () => (
+  <svg viewBox="0 0 512 336" className="w-6 h-4 rounded-sm shadow-sm cursor-pointer hover:scale-110 transition-transform">
+    <rect fill="#BF0A30" width="512" height="336"/>
+    <rect fill="#FFFFFF" y="26" width="512" height="26"/>
+    <rect fill="#FFFFFF" y="78" width="512" height="26"/>
+    <rect fill="#FFFFFF" y="130" width="512" height="26"/>
+    <rect fill="#FFFFFF" y="182" width="512" height="26"/>
+    <rect fill="#FFFFFF" y="234" width="512" height="26"/>
+    <rect fill="#FFFFFF" y="286" width="512" height="26"/>
+    <rect fill="#002868" width="205" height="182"/>
+  </svg>
+);
+
+const FlagSpain = () => (
+  <svg viewBox="0 0 512 336" className="w-6 h-4 rounded-sm shadow-sm cursor-pointer hover:scale-110 transition-transform">
+    <rect fill="#AA151B" width="512" height="336"/>
+    <rect fill="#F1BF00" y="84" width="512" height="168"/>
+  </svg>
+);
 const navLinks = [
   { href: "/", label: "Início", isRoute: true },
   { href: "#servicos", label: "Serviços", isRoute: false },
@@ -78,8 +106,15 @@ export function Header() {
             )}
           </div>
 
-          {/* CTA Buttons */}
+          {/* Flags + CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
+            {/* Language Flags */}
+            <div className="flex items-center gap-2 mr-2">
+              <FlagBrazil />
+              <FlagUSA />
+              <FlagSpain />
+            </div>
+            
             <Button
               variant="header"
               size="sm"

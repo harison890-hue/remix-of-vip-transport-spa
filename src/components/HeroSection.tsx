@@ -35,7 +35,7 @@ export function HeroSection() {
           alt="Veículo executivo de luxo Four Vip Transport"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/85 to-transparent" />
       </div>
 
       {/* Content */}

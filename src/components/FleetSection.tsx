@@ -33,8 +33,8 @@ const vehicles = [
     category: "Sedan Executivo",
     image: fleetCorolla,
     passengers: "4 passageiros",
-    description: "Toyota Corolla, Nissan Sentra ou similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
-    features: ["Wi-Fi 4G", "Ar Condicionado", "Conforto Total", "Carregador USB"],
+    description: "Toyota Corolla, Nissan Sentra ou similares da Categoria.",
+    features: ["Convencionais e Blindados", "Wi-Fi 4G", "Ar Condicionado", "Conforto Total", "Carregador USB"],
   },
   {
     id: 2,
@@ -42,8 +42,8 @@ const vehicles = [
     category: "Sedan Premium",
     image: fleetMercedesC180,
     passengers: "3 passageiros",
-    description: "Mercedes C180, Mercedes E250 e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
-    features: ["Wi-Fi 4G", "Couro Premium", "Água Mineral", "Carregador USB"],
+    description: "Mercedes C180, Mercedes E250 e Similares da Categoria.",
+    features: ["Convencionais e Blindados", "Wi-Fi 4G", "Couro Premium", "Água Mineral", "Carregador USB"],
   },
   {
     id: 3,
@@ -51,8 +51,8 @@ const vehicles = [
     category: "SUV Executivo",
     image: fleetJeepCommander,
     passengers: "4 passageiros",
-    description: "Jeep Commander, Toyota Corolla Cross e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
-    features: ["Wi-Fi 4G", "Espaço Amplo", "Conforto Premium", "Segurança Total"],
+    description: "Jeep Commander, Toyota Corolla Cross e Similares da Categoria.",
+    features: ["Convencionais e Blindados", "Wi-Fi 4G", "Espaço Amplo", "Conforto Premium", "Segurança Total"],
   },
   {
     id: 4,
@@ -60,8 +60,8 @@ const vehicles = [
     category: "Minivan Executiva",
     image: fleetMinivan,
     passengers: "6 passageiros",
-    description: "Fiat Scudo, Peugeot Expert e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
-    features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Conforto Familiar"],
+    description: "Fiat Scudo, Peugeot Expert e Similares da Categoria.",
+    features: ["Convencionais e Blindados", "Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Conforto Familiar"],
   },
   {
     id: 5,
@@ -69,8 +69,8 @@ const vehicles = [
     category: "Van Executiva",
     image: fleetVan,
     passengers: "12 passageiros",
-    description: "Mercedes Sprinter, Renault Master e Similares da Categoria. Disponíveis nas versões convencionais ou blindados.",
-    features: ["Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Seguro Total"],
+    description: "Mercedes Sprinter, Renault Master e Similares da Categoria.",
+    features: ["Convencionais e Blindados", "Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Seguro Total"],
   },
 ];
 

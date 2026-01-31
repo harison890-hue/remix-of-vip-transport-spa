@@ -143,7 +143,7 @@ export function FleetSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className={`group cursor-pointer ${
+                className={`group cursor-pointer flex flex-col h-full ${
                   activeIndex === index ? "lg:scale-105" : ""
                 } transition-all duration-500`}
                 onClick={() => setActiveIndex(index)}
@@ -169,16 +169,16 @@ export function FleetSection() {
                 </div>
 
                 {/* Description */}
-                <p className="mt-4 text-sm text-secondary-foreground/70 leading-relaxed">
+                <p className="mt-4 text-sm text-secondary-foreground/70 leading-relaxed flex-1">
                   {vehicle.description}
                 </p>
 
                 {/* Features */}
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2 min-h-[72px] content-start">
                   {vehicle.features.map((feature) => (
                     <span
                       key={feature}
-                      className="text-xs px-3 py-1.5 bg-secondary-foreground/5 border border-secondary-foreground/10 text-secondary-foreground/70 rounded"
+                      className="text-xs px-3 py-1.5 bg-secondary-foreground/5 border border-secondary-foreground/10 text-secondary-foreground/70 rounded h-fit"
                     >
                       {feature}
                     </span>

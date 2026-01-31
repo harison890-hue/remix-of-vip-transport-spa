@@ -27,6 +27,30 @@ const testimonials = [
       "Contratei para um evento corporativo e superou todas as expectativas. A coordenação foi perfeita e nossos convidados ficaram impressionados com o nível do serviço.",
     rating: 5,
   },
+  {
+    id: 4,
+    name: "Fernanda C.",
+    role: "Advogada Sênior",
+    content:
+      "Preciso de transporte confiável para reuniões importantes em São Paulo. A Four Vip nunca me deixou na mão. Veículos sempre limpos e motoristas educados que respeitam a privacidade.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "André P.",
+    role: "Diretor Comercial",
+    content:
+      "Excelente custo-benefício para quem busca qualidade. O atendimento 24h é um diferencial enorme, especialmente para voos que chegam de madrugada. Serviço nota 10!",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Juliana R.",
+    role: "Médica",
+    content:
+      "Descobri a Four Vip por indicação de colegas e virei cliente fiel. A tranquilidade de saber que terei um transporte seguro e pontual não tem preço. Recomendo a todos!",
+    rating: 5,
+  },
 ];
 
 export function TestimonialsSection() {

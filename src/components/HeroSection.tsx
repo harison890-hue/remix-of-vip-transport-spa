@@ -35,9 +35,7 @@ export function HeroSection() {
           alt="Veículo executivo de luxo Four Vip Transport"
           className="w-full h-full object-cover object-center"
         />
-        {/* Gradiente sutil profissional antracite */}
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-secondary/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-transparent to-secondary/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/70 to-transparent" />
       </div>
 
       {/* Content */}

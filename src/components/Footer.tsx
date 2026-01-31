@@ -83,7 +83,7 @@ export function Footer() {
                     href="tel:+5511996702111"
                     className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
                   >
-                    (11) 99670-2111
+                    +55 11 99670-2111
                   </a>
                 </div>
               </li>

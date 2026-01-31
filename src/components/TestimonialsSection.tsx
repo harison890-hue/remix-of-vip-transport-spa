@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
-import { useState } from "react";
+import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 
 const testimonials = [
   {
@@ -55,6 +55,26 @@ const testimonials = [
 
 export function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const goToNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % testimonials.length);
+  }, []);
+
+  const goToPrev = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  }, []);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      goToNext();
+    }, 5000); // 5 seconds per testimonial
+
+    return () => clearInterval(interval);
+  }, [isPaused, goToNext]);
 
   return (
     <section
@@ -79,7 +99,29 @@ export function TestimonialsSection() {
         </motion.div>
 
         {/* Testimonials Carousel */}
-        <div className="max-w-4xl mx-auto">
+        <div 
+          className="max-w-4xl mx-auto relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-10 w-12 h-12 rounded-full bg-card border border-border shadow-elegant flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+            aria-label="Depoimento anterior"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-10 w-12 h-12 rounded-full bg-card border border-border shadow-elegant flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+            aria-label="Próximo depoimento"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+
           <motion.div
             key={activeIndex}
             initial={{ opacity: 0, x: 20 }}
@@ -115,6 +157,21 @@ export function TestimonialsSection() {
               <div className="text-sm text-muted-foreground mt-1">
                 {testimonials[activeIndex].role}
               </div>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-border rounded-b-lg overflow-hidden">
+              <motion.div
+                className="h-full bg-primary"
+                initial={{ width: "0%" }}
+                animate={{ width: isPaused ? undefined : "100%" }}
+                transition={{ 
+                  duration: 5, 
+                  ease: "linear",
+                  repeat: 0
+                }}
+                key={`progress-${activeIndex}-${isPaused}`}
+              />
             </div>
           </motion.div>
 

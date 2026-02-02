@@ -5,34 +5,6 @@ import { Phone, Menu, X, Headset } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoFourvip from "@/assets/logo-fourvip.png";
 
-const FlagBrazil = () => (
-  <svg viewBox="0 0 640 480" className="w-5 h-3.5 rounded-[2px] shadow-sm cursor-pointer hover:opacity-80 transition-opacity">
-    <rect fill="#229E45" width="640" height="480"/>
-    <polygon fill="#F8E509" points="320,40 600,240 320,440 40,240"/>
-    <circle fill="#2B49A3" cx="320" cy="240" r="80"/>
-    <path d="M260,240 Q320,200 380,240" stroke="#FFFFFF" strokeWidth="12" fill="none"/>
-  </svg>
-);
-
-const FlagUSA = () => (
-  <svg viewBox="0 0 640 480" className="w-5 h-3.5 rounded-[2px] shadow-sm cursor-pointer hover:opacity-80 transition-opacity">
-    <rect fill="#BD3D44" width="640" height="480"/>
-    <rect fill="#FFFFFF" y="37" width="640" height="37"/>
-    <rect fill="#FFFFFF" y="111" width="640" height="37"/>
-    <rect fill="#FFFFFF" y="185" width="640" height="37"/>
-    <rect fill="#FFFFFF" y="259" width="640" height="37"/>
-    <rect fill="#FFFFFF" y="333" width="640" height="37"/>
-    <rect fill="#FFFFFF" y="407" width="640" height="37"/>
-    <rect fill="#192F5D" width="256" height="259"/>
-  </svg>
-);
-
-const FlagSpain = () => (
-  <svg viewBox="0 0 640 480" className="w-5 h-3.5 rounded-[2px] shadow-sm cursor-pointer hover:opacity-80 transition-opacity">
-    <rect fill="#C60B1E" width="640" height="480"/>
-    <rect fill="#FFC400" y="120" width="640" height="240"/>
-  </svg>
-);
 const navLinks = [
   { href: "/", label: "Início", isRoute: true },
   { href: "#servicos", label: "Serviços", isRoute: false },
@@ -107,15 +79,9 @@ export function Header() {
             )}
           </div>
 
-          {/* Flags + CTA Buttons */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Language Flags */}
-            <div className="flex items-center gap-1 mr-3">
-              <FlagBrazil />
-              <FlagUSA />
-              <FlagSpain />
-            </div>
-            
+
             <Button
               variant="header"
               size="sm"

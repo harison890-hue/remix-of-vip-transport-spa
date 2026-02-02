@@ -107,7 +107,7 @@ export function TestimonialsSection() {
           {/* Left Arrow */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-10 w-12 h-12 rounded-full bg-card border border-border shadow-elegant flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-16 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-card border border-border shadow-elegant flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             aria-label="Depoimento anterior"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -116,7 +116,7 @@ export function TestimonialsSection() {
           {/* Right Arrow */}
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-10 w-12 h-12 rounded-full bg-card border border-border shadow-elegant flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-16 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-card border border-border shadow-elegant flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             aria-label="Próximo depoimento"
           >
             <ChevronRight className="h-6 w-6" />
@@ -127,7 +127,7 @@ export function TestimonialsSection() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative bg-card border border-border rounded-lg p-8 md:p-12 shadow-elegant"
+            className="relative bg-card border border-border rounded-lg p-6 sm:p-8 md:p-12 shadow-elegant"
           >
             {/* Quote Icon */}
             <div className="absolute -top-5 left-8 w-10 h-10 rounded-full bg-primary flex items-center justify-center">
@@ -145,7 +145,7 @@ export function TestimonialsSection() {
             </div>
 
             {/* Content */}
-            <blockquote className="text-lg md:text-xl text-foreground leading-relaxed font-display italic">
+            <blockquote className="text-base sm:text-lg md:text-xl text-foreground leading-relaxed font-display italic">
               "{testimonials[activeIndex].content}"
             </blockquote>
 

@@ -157,7 +157,10 @@ export function FleetSection() {
                     src={vehicle.image}
                     alt={`${vehicle.name} - Transporte Executivo SP`}
                     className="w-full h-48 sm:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    style={vehicle.category === "SUV Executivo" ? { transform: 'scaleX(-1)' } : undefined}
+                    style={{
+                      ...(vehicle.category === "SUV Executivo" ? { transform: 'scaleX(-1)' } : {}),
+                      ...(vehicle.category === "SUV Premium" ? { filter: 'brightness(0.3) sepia(1) hue-rotate(0deg) saturate(0.1)' } : {})
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-80" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">

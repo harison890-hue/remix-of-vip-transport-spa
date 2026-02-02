@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Wifi, Shield, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ServingTrayIcon = ({ className }: { className?: string }) => (
   <svg 
@@ -17,8 +18,6 @@ const ServingTrayIcon = ({ className }: { className?: string }) => (
     <path d="M12 6V4" />
   </svg>
 );
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 import fleetMercedesC180 from "@/assets/fleet-mercedes-c180.jpg";
 import fleetCorolla from "@/assets/fleet-corolla.png";
@@ -82,8 +81,6 @@ const fleetFeatures = [
 ];
 
 export function FleetSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <section
       id="frota"
@@ -135,31 +132,28 @@ export function FleetSection() {
 
         {/* Vehicle Grid */}
         <div className="relative">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {vehicles.map((vehicle, index) => (
               <motion.div
                 key={vehicle.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                className={`group cursor-pointer flex flex-col h-full ${
-                  activeIndex === index ? "lg:scale-105" : ""
-                } transition-all duration-500`}
-                onClick={() => setActiveIndex(index)}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group flex flex-col h-full"
               >
                 <div className="relative overflow-hidden rounded-lg bg-anthracite-light">
                   <img
                     src={vehicle.image}
                     alt={`${vehicle.name} - Transporte Executivo SP`}
-                    className="w-full h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-48 sm:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-80" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
                     <span className="text-xs font-medium text-primary tracking-wider uppercase">
                       {vehicle.category}
                     </span>
-                    <h3 className="text-lg font-display font-medium text-secondary-foreground mt-1">
+                    <h3 className="text-base sm:text-lg font-display font-medium text-secondary-foreground mt-1">
                       {vehicle.name}
                     </h3>
                     <p className="text-sm text-secondary-foreground/70 mt-1">
@@ -168,24 +162,21 @@ export function FleetSection() {
                   </div>
                 </div>
 
-                {/* Description */}
                 <p className="mt-4 text-sm text-secondary-foreground/70 leading-relaxed flex-1">
                   {vehicle.description}
                 </p>
 
-                {/* Features */}
-                <div className="mt-3 flex flex-wrap gap-2 min-h-[72px] content-start">
+                <div className="mt-3 flex flex-wrap gap-2 min-h-[60px] content-start">
                   {vehicle.features.map((feature) => (
                     <span
                       key={feature}
-                      className="text-xs px-3 py-1.5 bg-secondary-foreground/5 border border-secondary-foreground/10 text-secondary-foreground/70 rounded h-fit"
+                      className="text-xs px-2 sm:px-3 py-1 sm:py-1.5 bg-secondary-foreground/5 border border-secondary-foreground/10 text-secondary-foreground/70 rounded h-fit"
                     >
                       {feature}
                     </span>
                   ))}
                 </div>
 
-                {/* CTA Button */}
                 <Button
                   variant="bronze"
                   className="w-full mt-4"
@@ -201,22 +192,6 @@ export function FleetSection() {
               </motion.div>
             ))}
           </div>
-        </div>
-
-        {/* Carousel Dots */}
-        <div className="flex justify-center gap-2 mt-8 lg:hidden">
-          {vehicles.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                activeIndex === index
-                  ? "w-8 bg-primary"
-                  : "bg-secondary-foreground/30"
-              }`}
-              aria-label={`Ver veículo ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>

@@ -33,8 +33,8 @@ export function WhatsAppButton() {
       {/* Pulse Animation */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
       
-      {/* Tooltip */}
-      <span className="absolute right-full mr-4 px-4 py-2 bg-secondary text-secondary-foreground text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-elegant">
+      {/* Tooltip - hidden on mobile */}
+      <span className="hidden md:block absolute right-full mr-4 px-4 py-2 bg-secondary text-secondary-foreground text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-elegant">
         Fale Conosco
       </span>
     </motion.button>

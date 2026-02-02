@@ -80,21 +80,21 @@ export function DifferentialsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
         >
-          {differentials.map((item, index) => (
+          {differentials.map((item) => (
             <motion.div
               key={item.title}
               variants={itemVariants}
               className="text-center group"
             >
-              <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:border-primary/40 group-hover:shadow-bronze transition-all duration-500">
-                <item.icon className="h-9 w-9 text-primary" />
+              <div className="w-14 h-14 md:w-20 md:h-20 mx-auto rounded-full bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 flex items-center justify-center mb-4 md:mb-6 group-hover:border-primary/40 group-hover:shadow-bronze transition-all duration-500">
+                <item.icon className="h-6 w-6 md:h-9 md:w-9 text-primary" />
               </div>
-              <h3 className="text-lg font-display font-medium text-foreground mb-3">
+              <h3 className="text-sm md:text-lg font-display font-medium text-foreground mb-2 md:mb-3">
                 {item.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
@@ -116,7 +116,7 @@ export function DifferentialsSection() {
             { value: "24/7", label: "Suporte Disponível" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-semibold text-primary">
+              <div className="text-2xl md:text-4xl font-display font-semibold text-primary">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground mt-2">

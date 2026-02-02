@@ -81,11 +81,7 @@ export function HeroSection() {
               <Button
                 variant="bronze"
                 size="xl"
-                onClick={() =>
-                  document
-                    .getElementById("cotacao")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={handleWhatsApp}
                 className="gap-2"
               >
                 Solicitar Cotação

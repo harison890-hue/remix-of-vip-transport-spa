@@ -22,6 +22,7 @@ const ServingTrayIcon = ({ className }: { className?: string }) => (
 import fleetMercedesC180 from "@/assets/fleet-mercedes-c180.jpg";
 import fleetCorolla from "@/assets/fleet-corolla.png";
 import fleetJeepCommander from "@/assets/fleet-jeep-commander.jpg";
+import fleetMercedesGLB from "@/assets/fleet-mercedes-glb.jpg";
 import fleetMinivan from "@/assets/fleet-minivan.jpg";
 import fleetVan from "@/assets/fleet-van.jpg";
 
@@ -55,6 +56,15 @@ const vehicles = [
   },
   {
     id: 4,
+    name: "SUV Premium",
+    category: "SUV Premium",
+    image: fleetMercedesGLB,
+    passengers: "4 passageiros",
+    description: "Mercedes GLB, BMW X1 e Similares da Categoria.",
+    features: ["Convencionais e Blindados", "Wi-Fi 4G", "Couro Premium", "Água Mineral", "Conforto Total"],
+  },
+  {
+    id: 5,
     name: "Minivan Executiva",
     category: "Minivan Executiva",
     image: fleetMinivan,
@@ -63,7 +73,7 @@ const vehicles = [
     features: ["Convencionais e Blindados", "Wi-Fi 4G", "Ar Condicionado", "Bagageiro Amplo", "Conforto Familiar"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Van Executiva",
     category: "Van Executiva",
     image: fleetVan,
@@ -147,6 +157,7 @@ export function FleetSection() {
                     src={vehicle.image}
                     alt={`${vehicle.name} - Transporte Executivo SP`}
                     className="w-full h-48 sm:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    style={{ transform: 'scaleX(-1)' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-80" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">

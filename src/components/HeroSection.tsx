@@ -72,9 +72,9 @@ export function HeroSection() {
             </div>
 
             <p className="text-premium text-white/70 max-w-lg">
-              Experimente o mais alto padrão em mobilidade executiva. Pontualidade,
-              discrição e conforto absoluto para executivos que valorizam cada
-              segundo do seu tempo.
+              Experimente o mais alto padrão em transfer executivo em São Paulo. 
+              Pontualidade, discrição e conforto absoluto para executivos que 
+              valorizam cada segundo do seu tempo.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

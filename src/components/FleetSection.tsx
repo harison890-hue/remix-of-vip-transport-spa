@@ -155,7 +155,7 @@ export function FleetSection() {
                 <div className="relative overflow-hidden rounded-lg bg-anthracite-light">
                   {["SUV Premium", "Sedan Premium"].includes(vehicle.category) && (
                     <div className="absolute top-3 right-3 z-10">
-                      <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-primary/90 text-primary-foreground rounded shadow-md backdrop-blur-sm">
+                      <span className="px-2.5 py-1 text-[10px] font-medium tracking-widest uppercase text-primary border border-primary/40 rounded-sm bg-secondary/80">
                         Blindados
                       </span>
                     </div>

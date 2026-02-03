@@ -80,19 +80,19 @@ export default function Contato() {
                     <div className="p-3 rounded-full bg-primary/10">
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h3 className="font-semibold text-foreground mb-1">
                         {item.title}
                       </h3>
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-muted-foreground hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors break-all text-sm"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-muted-foreground">{item.value}</p>
+                        <p className="text-muted-foreground text-sm">{item.value}</p>
                       )}
                     </div>
                   </div>

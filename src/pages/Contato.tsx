@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Localização",
-    value: "São Paulo, SP",
+    value: "Av. José Odorizzi, 2249 - Assunção, São Bernardo do Campo - SP",
     link: null,
   },
   {
@@ -130,20 +130,20 @@ export default function Contato() {
                 </h3>
                 <div className="rounded-xl overflow-hidden border border-border/50 shadow-lg">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5671234567!2d-46.6762777!3d-23.6248412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f08849a93b9%3A0xe12207446fd8a6d!2sTransfer%20Vip%20Executive%20-%20chauffer%20service!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.8!2d-46.5456!3d-23.7089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4292a9f4e9c5%3A0x5c0d3b3c3b3b3b3b!2sAv.%20Jos%C3%A9%20Odorizzi%2C%202249%20-%20Assun%C3%A7%C3%A3o%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP!5e0!3m2!1spt-BR!2sbr"
                     width="100%"
                     height="350"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Localização Transfer Vip Executive"
+                    title="Localização Four VIP Transport"
                     className="w-full"
                   />
                 </div>
                 <div className="mt-4 text-center">
                   <a
-                    href="https://www.google.com/maps/place/Transfer+Vip+Executive+-+chauffer+service/@-23.6248412,-46.6762777,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce4f08849a93b9:0xe12207446fd8a6d!8m2!3d-23.6248412!4d-46.6762777!16s%2Fg%2F11h7sp_btr"
+                    href="https://www.google.com/maps/search/Av+Jos%C3%A9+Odorizzi+2249+Assun%C3%A7%C3%A3o+S%C3%A3o+Bernardo+do+Campo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"

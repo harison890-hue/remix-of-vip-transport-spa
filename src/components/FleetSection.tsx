@@ -153,6 +153,13 @@ export function FleetSection() {
                 className="group flex flex-col h-full"
               >
                 <div className="relative overflow-hidden rounded-lg bg-anthracite-light">
+                  {["SUV Premium", "Sedan Premium"].includes(vehicle.category) && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-primary/90 text-primary-foreground rounded shadow-md backdrop-blur-sm">
+                        Blindados
+                      </span>
+                    </div>
+                  )}
                   <img
                     src={vehicle.image}
                     alt={`${vehicle.name} - Transporte Executivo SP`}
